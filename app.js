@@ -43,11 +43,11 @@ function chooseWinner(){
 		 (boxes[2].innerHTML==="X" && boxes[5].innerHTML==="X" && boxes[8].innerHTML==="X")||
 		 (boxes[0].innerHTML==="X" && boxes[4].innerHTML==="X" && boxes[8].innerHTML==="X")||
 		 (boxes[2].innerHTML==="X" && boxes[4].innerHTML==="X" && boxes[6].innerHTML==="X"))
-	{
-		p2Score++;
-		document.getElementById("p2score").innerHTML=p2Score;
-		alert("X Wins!");
-		reset();
+		{
+			p2Score++;
+			document.getElementById("p2score").innerHTML=p2Score;
+			alert("X Wins!");
+			reset();
 		
 	} else if (
 		(boxes[0].innerHTML==="O" && boxes[1].innerHTML==="O" && boxes[2].innerHTML==="O")||
@@ -62,33 +62,30 @@ function chooseWinner(){
 		(boxes[2].innerHTML==="O" && boxes[4].innerHTML==="O" && boxes[6].innerHTML==="O"))
 
 		{
-		p1Score++;
-		document.getElementById("p1score").innerHTML=p1Score;
-		alert("O Wins!");
-		reset();
-	}
-	
-
-	else {
+			p1Score++;
+			document.getElementById("p1score").innerHTML=p1Score;
+			alert("O Wins!");
+			reset();
+	} else {
 		catsGame();
 	}
 }
 
 	function catsGame(){
 		if (turn == 9) {
-		alert("Cat's Game!");
-		reset();
+			alert("Cat's Game!");
+			reset();
 		}
 	}
 
 
-function reset(){
-	for(var i = 0; i < boxes.length; i++){
-		boxes[i].innerHTML = " ";
-		turn = 0;
-	}
+	function reset(){
+		for(var i = 0; i < boxes.length; i++){
+			boxes[i].innerHTML = " ";
+			turn = 0;
+		}
 				
-}
+	}
 
 
 
